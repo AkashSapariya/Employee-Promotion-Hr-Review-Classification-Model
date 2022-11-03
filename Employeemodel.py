@@ -8,7 +8,6 @@ import pandas as pd
 import streamlit as st 
 import numpy as np
 import pickle
-from sklearn.preprocessing import LabelEncoder
 from imblearn.over_sampling import SMOTE
 from xgboost import XGBClassifier 
 
