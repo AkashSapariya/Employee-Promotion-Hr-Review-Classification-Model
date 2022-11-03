@@ -9,7 +9,7 @@ import streamlit as st
 import numpy as np
 import pickle
 from xgboost import XGBClassifier
-
+import xgboost as xgb
 # In[2]:
 
 
