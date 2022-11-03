@@ -9,7 +9,7 @@ import streamlit as st
 import numpy as np
 import pickle
 from xgboost import XGBClassifier
-
+import xgboost as xgb
 
 # In[2]:
 
@@ -190,9 +190,9 @@ promotion_test = pd.read_csv('employee_promotion.csv')
 
 # In[16]:
 
-model = bst.load_model('model_file')
-print(bst.get_dump())
-m = xgboost.DMatrix(input_df)
+bst = xgb.load_model('model_file')
+print(xgb.get_dump())
+m = xgb.DMatrix(input_df)
 bst.predict(m)
 # loaded_model=pickle.load(open('HRmodel.pkl','rb'))
 # prediction = loaded_model.predict(input_df)
