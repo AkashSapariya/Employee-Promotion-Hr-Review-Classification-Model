@@ -188,10 +188,10 @@ promotion_test = pd.read_csv('employee_promotion.csv')
 
 
 # In[16]:
-
-modelxg.save_model("model.json")
 modelxg = xgb.Booster()
-modelxg.load_model("model.json")
+modelxg.save_model("model.bin")
+
+modelxg.load_model("model.bin")
 preds = modelxg.predict(xgb.DMatrix(input_df))
 prediction_probability = modelxg.predict_proba(input_df)
 # bst.load_model('model_file')
