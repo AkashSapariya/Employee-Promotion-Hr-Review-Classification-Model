@@ -190,10 +190,13 @@ promotion_test = pd.read_csv('employee_promotion.csv')
 
 # In[16]:
 
-
-loaded_model=pickle.load(open('HRmodel.pkl','rb'))
-prediction = loaded_model.predict(input_df)
-prediction_probability = loaded_model.predict_proba(input_df)
+bst.load_model('model_file')
+print(bst.get_dump())
+m = xgboost.DMatrix(input_df)
+bst.predict(m)
+# loaded_model=pickle.load(open('HRmodel.pkl','rb'))
+# prediction = loaded_model.predict(input_df)
+prediction_probability = bst.predict_proba(input_df)
 
 
 # In[17]:
