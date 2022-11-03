@@ -188,10 +188,10 @@ promotion_test = pd.read_csv('employee_promotion.csv')
 
 
 # In[16]:
-def load(self, path):
-        model = xgboost.Booster()
-        model.load_model(os.path.join(path, self.model_path))
-        return model 
+# def load(self, path):
+#         model = xgboost.Booster()
+#         model.load_model(os.path.join(path, self.model_path))
+#         return model 
 # modelxg = xgb.Booster()
 # modelxg.save_model("model.bin")
 # modelxg.load_model("model.bin")
@@ -201,9 +201,9 @@ def load(self, path):
 # print(bst.get_dump())
 # m = bst.DMatrix(input_df)
 # bst.predict(m)
-# # loaded_model=pickle.load(open('HRmodel.pkl','rb'))
-# # prediction = loaded_model.predict(input_df)
-# prediction_probability = bst.predict_proba(input_df)
+# loaded_model=pickle.load(open('HRmodel.pkl','rb'))
+# prediction = loaded_model.predict(input_df)
+prediction_probability = bst.predict_proba(input_df)
 
 
 # In[17]:
