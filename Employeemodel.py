@@ -184,13 +184,13 @@ input_df = user_input_features()
 # In[11]:
 
 
-promotion_test = pd.read_csv('https://github.com/AkashSapariya/Employee-Promotion-Hr-Review-Classification-Model/blob/main/employee_promotion.csv')
+promotion_test = pd.read_csv('employee_promotion.csv')
 
 
 # In[16]:
 
 
-loaded_model=pickle.load(open('D:/Data Science/Project/Project 3/My work Deployment/HRmodel.pkl','rb'))
+loaded_model=pickle.load(open('HRmodel.pkl','rb'))
 prediction = loaded_model.predict(input_df)
 prediction_probability = loaded_model.predict_proba(input_df)
 
