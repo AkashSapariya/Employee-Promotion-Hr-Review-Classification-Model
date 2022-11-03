@@ -184,7 +184,7 @@ input_df = user_input_features()
 # In[11]:
 
 
-promotion_test = pd.read_csv('D:/Data Science/Project/Project 3/My work Deployment/employee_promotion.csv')
+promotion_test = pd.read_csv('https://github.com/AkashSapariya/Employee-Promotion-Hr-Review-Classification-Model/blob/main/employee_promotion.csv')
 
 
 # In[16]:
