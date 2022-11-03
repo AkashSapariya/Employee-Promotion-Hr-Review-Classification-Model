@@ -203,7 +203,7 @@ promotion_test = pd.read_csv('employee_promotion.csv')
 # bst.predict(m)
 loaded_model=pickle.load(open('HRmodel.pkl','rb'))
 prediction = loaded_model.predict(input_df)
-prediction_probability = bst.predict_proba(input_df)
+prediction_probability = loaded_model.predict_proba(input_df)
 
 
 # In[17]:
