@@ -190,7 +190,7 @@ promotion_test = pd.read_csv('employee_promotion.csv')
 
 # In[16]:
 
-bst.load_model('model_file')
+model = bst.load_model('model_file')
 print(bst.get_dump())
 m = xgboost.DMatrix(input_df)
 bst.predict(m)
